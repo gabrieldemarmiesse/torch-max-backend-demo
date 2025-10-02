@@ -1,0 +1,35 @@
+[project]
+name = "max-device"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "torch",
+    "torch-max-backend",
+    "mblack==25.7.0.dev2025092305",
+    "max==25.7.0.dev2025092305",
+    "max-core==25.7.0.dev2025092305",
+    "mojo-compiler==0.25.7.0.dev2025092305",
+]
+
+[tool.uv.sources]
+torch = { url = "https://github.com/gabrieldemarmiesse/pytorch/releases/download/custom_device/torch-2.10.0a0+git101bfc6-cp312-cp312-linux_x86_64.whl" }
+torch-max-backend = { git = "https://github.com/gabrieldemarmiesse/torch-max-backend", rev = "c4123a0866a0f81a03fe4c4ab7907921f1589efe" }
+max = [
+    { index = "modular-nightly" },
+]
+mblack = [
+    { index = "modular-nightly" },
+]
+max-core = [
+    { index = "modular-nightly" },
+]
+mojo-compiler = [
+    { index = "modular-nightly" },
+]
+
+[[tool.uv.index]]
+name = "modular-nightly"
+url = "https://dl.modular.com/public/nightly/python/simple/"
+explicit = true
