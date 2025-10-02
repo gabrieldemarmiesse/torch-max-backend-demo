@@ -1,0 +1,14 @@
+[project]
+name = "gpt2"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "tiktoken>=0.11.0",
+    "torch-max-backend",
+    "transformers>=4.56.2",
+]
+
+[tool.uv.sources]
+torch-max-backend = { path = "../../torch-max-backend/dist/torch_max_backend-0.3.0-py3-none-any.whl" }
